@@ -3,4 +3,5 @@ metadata:
   author: Mozzie Dvorak
   date: 2025-06-25
   description: "Create HTML content in the shell"
-  css: ./styles.css
+  # incorrect filepath, but required
+  css: ./doc/styles.css
