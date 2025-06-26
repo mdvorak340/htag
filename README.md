@@ -60,4 +60,4 @@ Report bugs to <mdvorak.personal@gmail.com>.
 
 # SEE ALSO
 
-Source code can be found at <https://temp.link.com>.
+Source code can be found at <https://github.com/mdvorak340/htag>.
