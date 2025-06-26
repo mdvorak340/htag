@@ -40,13 +40,28 @@
 <em>attr-val</em>]... [<em>text-content</em>]...</p>
 <h1 id="description">DESCRIPTION</h1>
 <p>Create HTML tags and attributes in the shell.</p>
-<p>The first argument must be the name of the tag. All other arguments
-are inserted into the tag as text content.</p>
-<p>If the tag name is the only non-flag argument, text is read from the
-STDIN.</p>
+<p>The first argument must be the name of the tag. All other non-flag
+arguments are inserted into the tag as text content.</p>
+<p>If the tag name is the only non-flag argument, then text is read from
+the STDIN.</p>
 <p>Long flags are automatically converted into attributes, and all
 consume one argument as the attribute value.</p>
 <p>Prints the created tag to the STDOUT.</p>
+<h1 id="exit-status">EXIT STATUS</h1>
+<dl>
+<dt>0</dt>
+<dd>
+Returned on success.
+</dd>
+<dt>1</dt>
+<dd>
+Returned when no tag name is provided.
+</dd>
+<dt>2</dt>
+<dd>
+Returned when an attribute is not given a value.
+</dd>
+</dl>
 <h1 id="bugs">BUGS</h1>
 <p>Report bugs to <a href="mailto:mdvorak.personal@gmail.com"
 class="email">mdvorak.personal@gmail.com</a>.</p>
@@ -71,7 +86,7 @@ $ for FILE in $(ls)
 &gt; done | htag ul
 &lt;ul&gt;&lt;li&gt;file1.txt&lt;/li&gt;&lt;li&gt;file2.txt&lt;/li&gt;&lt;li&gt;file3.txt&lt;/li&gt;&lt;/ul&gt;</code></pre>
 <h1 id="see-also">SEE ALSO</h1>
-<p>Source and installation instructions at <a
-href="https://temp.link.com" class="uri">https://temp.link.com</a>.</p>
+<p>Source code can be found at <a href="https://temp.link.com"
+class="uri">https://temp.link.com</a>.</p>
 </body>
 </html>

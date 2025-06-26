@@ -10,15 +10,27 @@ htag - create html in the shell
 
 Create HTML tags and attributes in the shell.
 
-The first argument must be the name of the tag.  All other arguments are
-inserted into the tag as text content.
+The first argument must be the name of the tag.  All other non-flag arguments
+are inserted into the tag as text content.
 
-If the tag name is the only non-flag argument, text is read from the STDIN.
+If the tag name is the only non-flag argument, then text is read from the
+STDIN.
 
 Long flags are automatically converted into attributes, and all consume one
 argument as the attribute value.
 
 Prints the created tag to the STDOUT.
+
+# EXIT STATUS
+
+0
+: Returned on success.
+
+1
+: Returned when no tag name is provided.
+
+2
+: Returned when an attribute is not given a value.
 
 # BUGS
 
@@ -48,4 +60,4 @@ Report bugs to <mdvorak.personal@gmail.com>.
 
 # SEE ALSO
 
-Source and installation instructions at <https://temp.link.com>.
+Source code can be found at <https://temp.link.com>.

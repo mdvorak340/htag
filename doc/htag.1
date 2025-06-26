@@ -11,15 +11,25 @@ htag \- create html in the shell
 Create HTML tags and attributes in the shell.
 .PP
 The first argument must be the name of the tag.
-All other arguments are inserted into the tag as text content.
+All other non\-flag arguments are inserted into the tag as text content.
 .PP
-If the tag name is the only non\-flag argument, text is read from the
-STDIN.
+If the tag name is the only non\-flag argument, then text is read from
+the STDIN.
 .PP
 Long flags are automatically converted into attributes, and all consume
 one argument as the attribute value.
 .PP
 Prints the created tag to the STDOUT.
+.SH EXIT STATUS
+.TP
+0
+Returned on success.
+.TP
+1
+Returned when no tag name is provided.
+.TP
+2
+Returned when an attribute is not given a value.
 .SH BUGS
 Report bugs to \c
 .MT mdvorak.personal@gmail.com
@@ -49,7 +59,7 @@ $ for FILE in $(ls)
 <ul><li>file1.txt</li><li>file2.txt</li><li>file3.txt</li></ul>
 .EE
 .SH SEE ALSO
-Source and installation instructions at \c
+Source code can be found at \c
 .UR https://temp.link.com
 .UE \c
 \&.
