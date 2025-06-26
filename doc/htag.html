@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mozzie Dvorak" />
+  <meta name="dcterms.date" content="2025-06-25" />
+  <meta name="description" content="Create HTML content in the shell" />
+  <title>htag</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">htag</h1>
+<p class="author">Mozzie Dvorak</p>
+<p class="date">2025-06-25</p>
+</header>
+<h1 id="name">NAME</h1>
+<p>htag - create html in the shell</p>
+<h1 id="synopsis">SYNOPSIS</h1>
+<p><strong>htag</strong> <em>tag-name</em> [--<em>attr-name</em>
+<em>attr-val</em>]... [<em>text-content</em>]...</p>
+<h1 id="description">DESCRIPTION</h1>
+<p>Create HTML tags and attributes in the shell.</p>
+<p>The first argument must be the name of the tag. All other arguments
+are inserted into the tag as text content.</p>
+<p>If the tag name is the only non-flag argument, text is read from the
+STDIN.</p>
+<p>Long flags are automatically converted into attributes, and all
+consume one argument as the attribute value.</p>
+<p>Prints the created tag to the STDOUT.</p>
+<h1 id="bugs">BUGS</h1>
+<p>Report bugs to <a href="mailto:mdvorak.personal@gmail.com"
+class="email">mdvorak.personal@gmail.com</a>.</p>
+<h1 id="examples">EXAMPLES</h1>
+<pre><code>$ htag p &quot;&quot;
+&lt;p&gt;&lt;/p&gt;
+
+$ htag p Some text
+&lt;p&gt;Some text&lt;/p&gt;
+
+$ htag p &quot;Some text&quot;
+&lt;p&gt;Some text&lt;/p&gt;
+
+$ echo &quot;Some text&quot; | htag p
+&lt;p&gt;Some text&lt;/p&gt;
+
+$ htag a &quot;An anchor tag&quot; --href &quot;https://foobar.baz&quot;
+&lt;a href=&quot;https://foobar.baz&quot;&gt;An anchor tag&lt;/a&gt;
+
+$ for FILE in $(ls)
+&gt; do htag li &quot;$FILE&quot;
+&gt; done | htag ul
+&lt;ul&gt;&lt;li&gt;file1.txt&lt;/li&gt;&lt;li&gt;file2.txt&lt;/li&gt;&lt;li&gt;file3.txt&lt;/li&gt;&lt;/ul&gt;</code></pre>
+<h1 id="see-also">SEE ALSO</h1>
+<p>Source and installation instructions at <a
+href="https://temp.link.com" class="uri">https://temp.link.com</a>.</p>
+</body>
+</html>

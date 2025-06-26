@@ -1,0 +1,6 @@
+metadata:
+  title: htag
+  author: Mozzie Dvorak
+  date: 2025-06-25
+  description: "Create HTML content in the shell"
+  css: ./styles.css
