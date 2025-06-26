@@ -30,7 +30,6 @@ void readStdin() {
 char* readClas(char** clas, int n) {
     char hasNotPrinted = 1;
 
-
     int textPtr = 0;
     int textLen = 255;
     char* text = malloc(sizeof(char) * textLen);

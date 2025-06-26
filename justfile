@@ -5,5 +5,5 @@ doc:
 
 # build the program
 build:
-	[ ! -d ./bin/ ] && mkdir ./bin/
+	[ ! -d ./bin/ ] && mkdir ./bin/ || true
 	gcc ./src/htag.c -o ./bin/htag
