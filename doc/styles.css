@@ -4,6 +4,11 @@
   box-sizing:border-box;
 }
 
+em {
+  font-style:normal;
+  text-decoration:underline 1px solid currentcolor;
+}
+
 html {
   font:13pt sans-serif;
   hyphens:auto;
