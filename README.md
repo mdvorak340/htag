@@ -34,7 +34,7 @@ Prints the created tag to the STDOUT.
 
 # BUGS
 
-Report bugs to <mdvorak.personal@gmail.com>.
+Report bugs to <mdvorak.projects@gmail.com>.
 
 # EXAMPLES
 
